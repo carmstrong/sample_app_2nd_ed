@@ -34,4 +34,8 @@ SampleApp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.logstash.host = ENV['LOGSTASH_PORT_5228_TCP_ADDR']
+  config.logstash.port = ENV['LOGSTASH_PORT_5228_TCP_PORT']
+  config.logstash.type = :tcp
 end
